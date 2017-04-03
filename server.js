@@ -1,5 +1,6 @@
 const express = require('express');
 const hbs = require('hbs');
+const port = process.env.PORT || 3000;
 var app = express();
 
 var fs = require('fs');
@@ -54,6 +55,8 @@ app.get('/bad', (req, res) => {
 	         });
 });
 
-app.listen(3000, () => {
-	console.log('We run at 3000');
+
+
+app.listen(port, () => {
+	console.log(`We run at ${port}`);
 });
